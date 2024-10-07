@@ -1,0 +1,203 @@
+/* General Container and Layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  background-color: #f5f5f5;
+  padding: 20px; /* Added padding for smaller screens */
+}
+
+.form-box {
+  display: flex;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1100px;
+  width: 100%;
+  align-items: center;
+  flex-direction: row; /* Default to row layout */
+}
+
+.left-section, .right-section {
+  flex: 1;
+}
+
+/* Left Section: Logo and Text */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  padding: 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 50px;
+}
+
+.logo-image {
+  width: 80px;
+  height: 50px;
+}
+
+.step-info {
+  margin-bottom: 20px;
+}
+
+.step-number {
+  font-size: 0.8rem;
+  color: #888888;
+  font-weight: bold;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  color: black; /* Changed to black for better readability */
+}
+
+.subtext {
+  color: #666666;
+  font-size: 1rem;
+}
+
+/* Right Section: Email Input and Button */
+.right-section {
+  flex: 1;
+  padding-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.email-input {
+  width: 100%;
+  padding: 10px 60px 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+.email-input:focus {
+  border-color: #4a90e2;
+}
+
+/* Validation Error */
+.error-input {
+  border-color: red; /* Highlight input in red if there's an error */
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Continue Button */
+.submit-buttons {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px; /* Reduced margin for mobile */
+}
+
+.submit-buttons:hover {
+  background-color: #333;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .email-input {
+    width: 80%;
+    padding: 10px 60px 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+  }
+  .form-box {
+      flex-direction: column; /* Stack sections vertically */
+      padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .left-section, .right-section {
+      flex: unset; /* Reset flex to avoid uneven height */
+      width: 100%; /* Ensure full width */
+      text-align: center; /* Center align text */
+  }
+
+  .left-section {
+      padding-right: 0;
+      margin-bottom: 20px; /* Add some spacing between sections */
+  }
+
+  .right-section {
+      padding-left: 0;
+  }
+
+  .heading {
+      font-size: 1.5rem; /* Decrease font size for smaller screens */
+  }
+
+  .subtext {
+      font-size: 0.9rem; /* Adjust subtext font size */
+  }
+
+  .logo {
+      width: 80px; /* Reduce size of logo on smaller screens */
+      height: 40px;
+  }
+
+  .logo-image {
+      width: 60px;
+      height: 40px;
+  }
+
+  .submit-buttons {
+      margin-top: 10px; /* Reduce top margin on mobile */
+  }
+}
+
+/* Additional small screen adjustments */
+@media screen and (max-width: 480px) {
+  .heading {
+      font-size: 1.2rem; /* Further decrease font size on very small screens */
+  }
+
+  .subtext {
+      font-size: 0.8rem; /* Adjust subtext font size for extra small screens */
+  }
+
+  .submit-buttons {
+      padding: 10px 20px;
+      font-size: 0.9rem; /* Adjust button size */
+  }
+  .email-input {
+    width: 80%;
+    padding: 10px 60px 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+  }
+}

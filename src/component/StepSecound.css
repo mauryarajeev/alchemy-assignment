@@ -1,0 +1,255 @@
+/* Overall container to center the content */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  background-color: #f5f5f5;
+  padding: 20px; /* Added padding for smaller screens */
+}
+
+/* Main wrapper for the form and its content */
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap; /* Allow content to wrap on small screens */
+}
+
+.subtext {
+  color: #666666;
+  font-size: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Left Section: Contains logo and text */
+.left-section {
+  flex: 0.6;
+  padding-right: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.logo-image {
+  width: 80px;
+  height: 50px;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.step-info {
+  margin-bottom: 20px;
+}
+
+.step-number {
+  font-size: 0.85rem;
+  color: #888888;
+  font-weight: bold;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+/* Right Section: Contains form with input and button */
+.right-section {
+  flex: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-form {
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+  width: 90%;
+  margin-bottom: 15px;
+}
+
+/* Password input with extra right padding for the icon */
+.password-input {
+  width: 100%;
+  padding: 12px 45px 12px 15px; /* Add right padding to make space for the eye icon */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.password-input:focus {
+  border-color: #4a90e2;
+}
+
+/* Wrapper for the password input and toggle icon */
+.password-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Position the toggle icon inside the input field */
+.password-toggle-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+/* Optional: Hover effect for eye icon */
+.password-toggle-icon:hover {
+  color: #4a90e2;
+}
+
+/* Container for the paragraph and button to be on the same line */
+.requirements-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.password-requirements {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #7d7a7a;
+  flex: 1;
+}
+
+.submit-button {
+  padding: 12px 30px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  flex-shrink: 0;
+  margin-top: 0px;
+}
+
+.submit-button:hover {
+  background-color: #333;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .password-input {
+    width: 80%;
+    padding: 12px 45px 12px 15px; /* Add right padding to make space for the eye icon */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  .form-wrapper {
+    flex-direction: column; /* Stack left and right sections vertically */
+  }
+
+  .card {
+    padding: 30px; /* Reduce padding for mobile */
+  }
+
+  .left-section, .right-section {
+    flex: unset; /* Reset flex to default */
+    width: 100%; /* Ensure full width on mobile */
+    text-align: center;
+    padding-right: 0; /* Remove padding on the left section */
+  }
+
+  .heading {
+    font-size: 1.6rem; /* Decrease font size for mobile */
+  }
+
+  .password-form {
+    width: 100%;
+  }
+
+  .input-container {
+    width: 100%; /* Ensure input takes full width */
+  }
+
+  .password-input {
+    font-size: 1rem;
+    padding: 10px 40px 10px 15px; /* Adjust padding for mobile */
+  }
+
+  .submit-button {
+    padding: 12px 25px; /* Adjust button size */
+    font-size: 0.9rem;
+  }
+
+  .password-requirements {
+    font-size: 0.8rem; /* Adjust text size */
+  }
+}
+
+/* Further adjustments for smaller devices */
+@media screen and (max-width: 480px) {
+  .password-input {
+    width: 80%;
+    padding: 12px 45px 12px 15px; /* Add right padding to make space for the eye icon */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  .card {
+    padding: 20px; /* Further reduce padding for smaller screens */
+  }
+
+  .heading {
+    font-size: 1.3rem; /* Further decrease heading font size */
+  }
+
+  .password-input {
+    font-size: 0.9rem;
+    padding: 8px 35px 8px 10px; /* Adjust input padding */
+  }
+
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 0.8rem; /* Adjust button size */
+  }
+
+  .password-requirements {
+    font-size: 0.7rem;
+  }
+}

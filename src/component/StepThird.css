@@ -1,0 +1,144 @@
+/* Main Container */
+.containers {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+.header {
+  margin-bottom: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.logo-image {
+  width: 80px;
+  height: 50px;
+}
+
+.company-name {
+  font-size: 1.8rem;
+  margin-left: 10px;
+}
+
+.welcome-text h2 {
+  font-size: 1.5rem;
+}
+
+.welcome-text .highlight {
+  font-weight: bold;
+}
+
+.welcome-text p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Section (Photography, Learning) */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Carousel Styling */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and IE */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  min-width: 200px;
+  margin-right: 20px;
+  display: flex; /* Center items vertically */
+  flex-direction: column; /* Stack image and title */
+  align-items: center; /* Center align items */
+}
+
+.carousel-item img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  height: 300px;
+}
+
+/* Pagination Dots */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer; /* Indicate clickable dots */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.dot:hover {
+  background-color: #888; /* Darker shade on hover */
+}
+
+.dot.active {
+  background-color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .carousel-item {
+      min-width: 150px; /* Reduce item width on smaller screens */
+  }
+
+  .welcome-text h2 {
+      font-size: 1.2rem; /* Smaller text size */
+  }
+
+  .welcome-text p {
+      font-size: 0.9rem; /* Smaller text size */
+  }
+
+  .section h3 {
+      font-size: 1rem; /* Smaller section title */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+      width: 60px; /* Adjust logo size for smaller screens */
+  }
+
+  .carousel-item img {
+      height: 200px; /* Reduce image height for smaller screens */
+  }
+}

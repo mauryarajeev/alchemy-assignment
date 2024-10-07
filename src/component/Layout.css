@@ -1,0 +1,45 @@
+/* Layout.css */
+
+/* General layout styles */
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+  }
+  
+  /* Header styles */
+  .layout-header {
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main content area */
+  .layout-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  /* Sidebar styles */
+  .layout-sidebar {
+    width: 100%;
+    height: 70vh;
+    background-color: #2d3748; /* Tailwind's bg-gray-800 equivalent */
+    overflow-y: auto;
+  }
+  
+  /* For larger screens */
+  @media (min-width: 768px) {
+    .layout-sidebar {
+      width: 16rem; /* 64 in Tailwind spacing scale (md:w-64) */
+    }
+  }
+  
+  /* Main content section */
+  .layout-main {
+    flex: 1;
+    padding: 1rem;
+    background-color: transparent;
+    overflow: auto;
+  }
+  

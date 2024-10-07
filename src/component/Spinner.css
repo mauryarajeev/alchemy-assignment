@@ -1,0 +1,26 @@
+/* Spinner.css */
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+  }
+  
+  .spinner {
+    width: 3rem; /* 12px equivalent */
+    height: 3rem;
+    fill: blue; /* You can customize the fill color */
+    animation: spin 1s linear infinite; /* Infinite spinning animation */
+  }
+  
+  .spinner-background {
+    fill: #e5e7eb; /* Equivalent to Tailwind's gray-200 */
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
